@@ -41,7 +41,7 @@ lecturer1 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_num
 
 lecturer2 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Accounting")
 
-lecturer3 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", field_of_speciality: "Applied Mathematics")
+lecturer3 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Applied Mathematics")
 
 lecturer4 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Economics")
 

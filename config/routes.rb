@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :department_heads
-  resources :units
+  resources :department_heads,only: [:index]
+  resources :units,only: [:show, :index, :create, :update]
   resources :lecturers
-  resources :cohorts
-  resources :courses
+  resources :cohorts,only: [:show, :index]
+  resources :courses,only: [:show, :index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
