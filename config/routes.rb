@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :department_heads,only: [:index]
+  resources :department_heads,only: [:index, :create]
   resources :units,only: [:show, :index, :create, :update]
   resources :lecturers
   resources :cohorts,only: [:show, :index]

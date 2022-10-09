@@ -6,6 +6,7 @@ class CreateDepartmentHeads < ActiveRecord::Migration[7.0]
       t.string :phone_number
       t.string :email_address
       t.string :field_of_speciality
+      t.string :password_digest
 
       t.timestamps
     end

@@ -10,6 +10,8 @@ gem "faker"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
+gem "bcrypt", "~>3.1.7"
+
 gem "active_model_serializers"
 
 gem "byebug"

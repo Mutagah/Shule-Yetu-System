@@ -100,6 +100,6 @@ unit16 = Unit.create(code:"STA 305",name:"Probability Modelling",cohort_id: coho
 
 puts "Seeding Department Head Table"
 
-HOD = DepartmentHead.create(name: "Dr Samuel Mutua", age: rand(30..56),  phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality:"Applied Mathematics")
+HOD = DepartmentHead.create(name: "Dr Samuel Mutua", age: rand(30..56),  phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality:"Applied Mathematics",password:"applieddaktari")
 
 puts "End of Seeding Database tables"

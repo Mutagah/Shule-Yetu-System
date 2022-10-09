@@ -33,6 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_090005) do
     t.string "phone_number"
     t.string "email_address"
     t.string "field_of_speciality"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
