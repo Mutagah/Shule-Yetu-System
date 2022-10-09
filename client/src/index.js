@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.bundle.js'
+// import '~mdb-ui-kit/css/mdb.min.css';
+// import * as mdb from "mdb-ui-kit";
+// import { Input } from "mdb-ui-kit"; 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
