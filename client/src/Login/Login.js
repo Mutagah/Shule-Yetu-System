@@ -24,7 +24,6 @@ function Login({setIsHod})
         }
     })
 }
-    console.log(userDetails)
     return (
     <>
     <div className="container-fluid mt-1 py-3 rounded-3" style={{backgroundColor:"#4CE0D2"}}>

@@ -30,7 +30,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :unfound_record
     private
 
     def lecturer_params
-        params.permit(:name, :age, :phone_number, :email_address, :field_of_speciality)
+        params.permit(:name, :age, :phone_number, :email_address, :field_of_speciality, :image_url, :password)
     end
 
     def invalid_record(invalid)

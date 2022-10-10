@@ -7,6 +7,7 @@ class CreateLecturers < ActiveRecord::Migration[7.0]
       t.string :email_address
       t.string :field_of_speciality
       t.string :image_url
+      t.string :password_digest
 
       t.timestamps
     end

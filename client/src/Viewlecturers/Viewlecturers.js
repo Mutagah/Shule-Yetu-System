@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
-function Viewlecturers(){
-    const [lecturersinfo , setlecturerinfo] = useState([])
+import React, { useState } from "react";
+function Viewlecturers({lecturersinfo}){
+    console.log(lecturersinfo)
     const [searchCriteria, setSearchCriteria] = useState("")
     function handleChange(event){
         setSearchCriteria(event.target.value)
     }
     const filteredLecturesDisplay = lecturersinfo.filter((lecturer)=> lecturer.name.toLowerCase().includes(searchCriteria.toLowerCase()))
-
-    useEffect(()=>{
-        fetch("/lecturers").then(res => res.json()).then(data =>setlecturerinfo(data))
-    },[])
     const lecturersDisplay = filteredLecturesDisplay.map((lecturer,index)=>{
         return (
             <div key={index} className="card mb-3" style={{width: "540px",border:"#136F63 5px solid"}}>
