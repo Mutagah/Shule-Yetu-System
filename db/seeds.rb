@@ -37,29 +37,29 @@ cohort8 = Cohort.create(year_of_study:4,semester:1,course_id:course2.id)
 
 puts "Seeding Lecturers table"
 
-lecturer1 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Statistics")
+lecturer1 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Statistics",image_url:"https://image.shutterstock.com/image-photo/asian-senior-male-calculus-professor-260nw-1891943233.jpg")
 
-lecturer2 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Accounting")
+lecturer2 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Accounting",image_url:"https://pediaa.com/wp-content/uploads/2016/04/Difference-Between-Lecturer-and-Professor-image-2.jpg")
 
-lecturer3 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Applied Mathematics")
+lecturer3 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Applied Mathematics",image_url:"https://images.practicaladultinsights.com/slideshow-mobile-small/woman-giving-lecture.jpg")
 
-lecturer4 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Economics")
+lecturer4 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Economics",image_url:"https://us.123rf.com/450wm/lightfieldstudios/lightfieldstudios1903/lightfieldstudios190306033/118631872-beautiful-female-teacher-in-formal-wear-writing-in-notebook-and-looking-at-camera-in-classroom.jpg?ver=6")
 
-lecturer5 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Multimedia Systems")
+lecturer5 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Multimedia Systems",image_url:"https://www.kenyans.co.ke/files/styles/article_style_mobile/public/images/media/Taita%20Taveta%20University%20Lecturer%20Peter%20Ochieng%20appointed%20for%20a%20role%20at%20Cambridge%20University.jpg?itok=4_R1FYxR")
 
-lecturer6 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Computer Networks")
+lecturer6 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Computer Networks",image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXuYpFX43msBV9QwD2onqOifwluVcHnxREdz2EnziUvDAbhiB01efL5WBdiFZ_24qtJTQ&usqp=CAU")
 
-lecturer7 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Computer/System Programming")
+lecturer7 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Computer/System Programming",image_url:"https://www.alfred.edu/about/community/outreach/_images/scholes-lecture.jpg")
 
-lecturer8 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Pure Mathematics")
+lecturer8 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Pure Mathematics",image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ60Q5rRqgboujgYfFXtPSpNig1a9w5jK9TEspNzcCOS7YR0517E503qjFiG6d986cJ24&usqp=CAU")
 
-lecturer9 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Computer Graphics")
+lecturer9 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Computer Graphics",image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5q_oxvPydUjiEjy70IVwlytXbKJbupxmAsh_eC3Fl65CahGchjZTl5WwShAjGVDAbrQU&usqp=CAU")
 
-lecturer10 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Database Systems")
+lecturer10 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Database Systems",image_url:"https://media.istockphoto.com/photos/portrait-of-smiling-professor-in-the-amphitheater-picture-id1128666909?k=20&m=1128666909&s=612x612&w=0&h=Kuk_id7fnDBVBW-2SpGjId0wptbUUefyVhM7RzaPeOI=")
 
-lecturer11 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Internet Application")
+lecturer11 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Internet Application",image_url:"https://media.istockphoto.com/photos/portrait-of-an-attractive-successful-influential-adult-caucasian-or-picture-id1309478236?k=20&m=1309478236&s=612x612&w=0&h=-ej9n6VTbLsdBs7YdXR1R130g1qRjkdn6850KKYbDSY=")
 
-lecturer12 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Data Structures")
+lecturer12 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Data Structures",image_url:"https://www.koimoi.com/wp-content/new-galleries/2020/04/money-heist-alvaro-morte-had-to-audition-these-many-times-to-bag-the-role-of-professor-in-la-casa-de-papel-001.jpg")
 
 
 
