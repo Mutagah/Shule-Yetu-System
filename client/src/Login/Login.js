@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import myImage from "../Images/undraw_teaching_re_g7e3 (1).svg"
-function Login()
+function Login({setIsHod})
 {
     const [userDetails, setUserDetails] = useState({})
     const [error, setErrors] = useState([])
@@ -18,7 +18,7 @@ function Login()
     }).then(res=>{
         if(res.ok)
         {
-            res.json().then(console.log("Hello guys")).finally(setUserDetails({name: "", password: ""}))
+            res.json().then(user => setIsHod(user)).finally(setUserDetails({name: "", password: ""}))
         }else{
             res.json().then(e => setErrors(Object.entries(e.error).flat().join(" : "))).finally(setUserDetails({name: "", password: ""}))
         }
@@ -33,10 +33,10 @@ function Login()
                 <nav className="navbar navbar-expand-lg navbar-light" >
                 <div className="container-fluid">
                     <h3 className="fw-bolder display-6 ">Shule Yetu Management System</h3>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse gx-4" id="navbarNavDropdown">
+                    </button> */}
+                    {/* <div className="collapse navbar-collapse gx-4" id="navbarNavDropdown">
                     <ul className="navbar-nav ms-auto pe-2 d-flex">
                         <li className="nav-item">
                         <h5 className="nav-link active" aria-current="page">Home</h5>
@@ -48,7 +48,7 @@ function Login()
                         <h5 className="nav-link">Pricing</h5>
                         </li>
                      </ul>
-                    </div>
+                    </div> */}
                 </div>    
                 </nav>
                 </div>

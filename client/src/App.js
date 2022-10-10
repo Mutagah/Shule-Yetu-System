@@ -1,11 +1,16 @@
 // import logo from './logo.svg';
 import './App.css';
 import "./Login/Login.js"
+import React,{useState} from 'react';
+import Viewlecturers from './Viewlecturers/Viewlecturers';
 import Login from './Login/Login.js';
 function App() {
+  const [isHod, setIsHod] = useState("")
+  if(!isHod) return  <Login setIsHod={setIsHod}/>
   return (
     <>
-    <Login/>
+    {/* <Login setIsHod={setIsHod}/> */}
+    <Viewlecturers/>
     </>
     // <div className="App">
     //   <header className="App-header">
