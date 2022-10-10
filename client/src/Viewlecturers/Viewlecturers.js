@@ -10,9 +10,9 @@ function Viewlecturers(){
     useEffect(()=>{
         fetch("/lecturers").then(res => res.json()).then(data =>setlecturerinfo(data))
     },[])
-    const lecturersDisplay = filteredLecturesDisplay.map((lecturer)=>{
+    const lecturersDisplay = filteredLecturesDisplay.map((lecturer,index)=>{
         return (
-            <div className="card mb-3" style={{width: "540px",border:"#136F63 5px solid"}}>
+            <div key={index} className="card mb-3" style={{width: "540px",border:"#136F63 5px solid"}}>
                 {/* #84CAE7 */}
                 {/* #41B2E2 */}
             <div className="row g-0">

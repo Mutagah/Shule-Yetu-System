@@ -4,30 +4,20 @@ import "./Login/Login.js"
 import React,{useState} from 'react';
 import Viewlecturers from './Viewlecturers/Viewlecturers';
 import Login from './Login/Login.js';
+import {Route,Routes} from "react-router-dom"
+import HodNavbar from "./HodNavbar/HodNavbar.js"
+import RegisterLecturer from './RegisterLecturer/RegisterLecturer';
 function App() {
   const [isHod, setIsHod] = useState("")
   if(!isHod) return  <Login setIsHod={setIsHod}/>
   return (
     <>
-    {/* <Login setIsHod={setIsHod}/> */}
-    <Viewlecturers/>
+    <HodNavbar/>
+    <Routes>
+      <Route exact path="/registerlecturer" element={<RegisterLecturer/>}/>
+      <Route exact path="/viewlecturers" element={<Viewlecturers/>} />
+    </Routes>
     </>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
 }
 

@@ -32,23 +32,7 @@ function Login({setIsHod})
                 <div className="col">
                 <nav className="navbar navbar-expand-lg navbar-light" >
                 <div className="container-fluid">
-                    <h3 className="fw-bolder display-6 ">Shule Yetu Management System</h3>
-                    {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                    </button> */}
-                    {/* <div className="collapse navbar-collapse gx-4" id="navbarNavDropdown">
-                    <ul className="navbar-nav ms-auto pe-2 d-flex">
-                        <li className="nav-item">
-                        <h5 className="nav-link active" aria-current="page">Home</h5>
-                        </li>
-                        <li className="nav-item">
-                        <h5 className="nav-link">Features</h5>
-                        </li>
-                        <li className="nav-item">
-                        <h5 className="nav-link">Pricing</h5>
-                        </li>
-                     </ul>
-                    </div> */}
+                    <h3 className="fw-bolder display-6 text-center">Shule Yetu Management System</h3>
                 </div>    
                 </nav>
                 </div>
@@ -58,7 +42,7 @@ function Login({setIsHod})
         <div className="row">
             <div className="col-md-6"><img src={myImage} alt="" className="img-fluid"/></div>
             <div className="col-md-6">
-            <div className="card my-2 mt-5">
+            <div className="card my-2 mt-5" style={{backgroundColor:"#4CE0D2"}}>
                     <div className="card-body">
                         <h3 className="card-title text-center mb-4"><u>Sign up / Login form</u></h3>
                         <h6 className="card-subtitle mb-2 text-muted text-center">Please enter you details below</h6>
