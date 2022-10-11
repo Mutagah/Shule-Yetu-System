@@ -86,17 +86,17 @@ unit9 = Unit.create(code:"ICS 2311",name:"Computer Graphics",lecturer_id: lectur
 
 unit10 = Unit.create(code:"ICS 2206",name:"Database Management",lecturer_id: lecturer10.id,cohort_id:cohort2.id)
 
-unit11 = Unit.create(code:"STA 201",name:"Probability and Statistics",cohort_id:cohort6.id)
+unit11 = Unit.create(code:"STA 201",name:"Probability and Statistics II",lecturer_id: lecturer1.id,cohort_id:cohort6.id)
 
-unit12 = Unit.create(code:"STA 223",name:"Operations Research",cohort_id: cohort6.id)
+unit12 = Unit.create(code:"STA 223",name:"Operations Research",lecturer_id: lecturer1.id,cohort_id: cohort6.id)
 
-unit13 = Unit.create(code:"STA 301",name:"Probability and Statistics",cohort_id: cohort7.id)
+unit13 = Unit.create(code:"STA 301",name:"Probability and Statistics III",lecturer_id: lecturer1.id,cohort_id: cohort7.id)
 
-unit14 = Unit.create(code:"STA 303",name:"Theory of Estimation",cohort_id: cohort7.id)
+unit14 = Unit.create(code:"STA 303",name:"Theory of Estimation",lecturer_id: lecturer1.id,cohort_id: cohort7.id)
 
-unit15 = Unit.create(code:"STA 307",name:"Macro economics",cohort_id: cohort7.id)
+unit15 = Unit.create(code:"STA 307",name:"Macro economics",lecturer_id: lecturer4.id,cohort_id: cohort7.id)
 
-unit16 = Unit.create(code:"STA 305",name:"Probability Modelling",cohort_id: cohort7.id)
+unit16 = Unit.create(code:"STA 305",name:"Probability Modelling",lecturer_id: lecturer1.id,cohort_id: cohort7.id)
 
 puts "Seeding Department Head Table"
 

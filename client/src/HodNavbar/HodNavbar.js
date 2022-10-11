@@ -16,7 +16,7 @@ function HodNavbar(){
                 <div className="navbar-nav ms-auto">
                     <NavLink className="nav-link active">Home</NavLink>
                     <NavLink className="nav-link" to="registerlecturer">Register Lecturer</NavLink>
-                    <NavLink className="nav-link" to="unallocatedunits">Unallocated Units</NavLink>
+                    <NavLink className="nav-link" to="viewunits">View Units</NavLink>
                     <NavLink className="nav-link" to="viewlecturers">View Lecturers</NavLink>
                 </div>
                 </div>

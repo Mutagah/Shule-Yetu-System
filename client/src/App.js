@@ -7,6 +7,7 @@ import Login from './Login/Login.js';
 import {Route,Routes} from "react-router-dom"
 import HodNavbar from "./HodNavbar/HodNavbar.js"
 import RegisterLecturer from './RegisterLecturer/RegisterLecturer';
+import ViewUnits from './ViewUnits/ViewUnits';
 function App() {
   const [isHod, setIsHod] = useState("")
   const [lecturersinfo, setlecturersinfo] = useState([])
@@ -23,6 +24,7 @@ function onAddingnewLecture(newLecturer){
     <Routes>
       <Route exact path="/registerlecturer" element={<RegisterLecturer onAddingnewLecture={onAddingnewLecture}/>}/>
       <Route exact path="/viewlecturers" element={<Viewlecturers lecturersinfo={lecturersinfo}/>} />
+      <Route exact path="/viewunits" element={<ViewUnits/>} />
     </Routes>
     </>
   );
