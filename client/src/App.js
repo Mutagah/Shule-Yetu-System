@@ -25,7 +25,7 @@ function onAddingnewLecture(newLecturer){
     <Routes>
       <Route exact path="/registerlecturer" element={<RegisterLecturer onAddingnewLecture={onAddingnewLecture}/>}/>
       <Route exact path="/registerunit" element={<RegisterUnit/>}/>
-      <Route exact path="/viewlecturers" element={<Viewlecturers lecturersinfo={lecturersinfo}/>} />
+      <Route exact path="/viewlecturers" element={<Viewlecturers lecturersinfo={lecturersinfo} setlecturersinfo={setlecturersinfo}/>} />
       <Route exact path="/viewunits" element={<ViewUnits/>} />
     </Routes>
     </>

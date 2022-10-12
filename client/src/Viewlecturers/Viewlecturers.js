@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-function Viewlecturers({lecturersinfo}){
-    console.log(lecturersinfo)
+function Viewlecturers({lecturersinfo,setlecturersinfo}){
+    // console.log(lecturersinfo)
     const [searchCriteria, setSearchCriteria] = useState("")
     function handleChange(event){
         setSearchCriteria(event.target.value)
@@ -28,7 +28,7 @@ function Viewlecturers({lecturersinfo}){
                         <div className="row">
                             <div className="col d-flex justify-content-between">
                             <button className="rounded-pill" style={{backgroundColor:"#41B2E2"}}>View Units</button>
-                            <button className="rounded-pill" style={{backgroundColor:"#41B2E2"}}>Delete</button>
+                            <button className="rounded-pill" style={{backgroundColor:"#41B2E2"}} onClick={()=>handleDeletelec(lecturer.id)}>Delete</button>
                             </div>
                         </div>
                         
@@ -39,6 +39,16 @@ function Viewlecturers({lecturersinfo}){
             </div>
         )
     })
+    function handleDeletelec(lecId){
+            fetch(`/lecturers/${lecId}`,{
+              method : "DELETE",
+            })
+            const updatedlecturers = lecturersinfo.filter((lec)=>
+            {
+                return (lec.id !== lecId)
+            })
+            setlecturersinfo(updatedlecturers)
+    }
     
     return(
         <>
