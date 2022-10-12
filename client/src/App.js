@@ -5,7 +5,7 @@ import React,{useState,useEffect} from 'react';
 import Viewlecturers from './Viewlecturers/Viewlecturers';
 import Login from './Login/Login.js';
 import {Route,Routes} from "react-router-dom"
-import RegisterUnit from './ViewUnits/RegisterUnit/RegisterUnit';
+import RegisterUnit from './RegisterUnit/RegisterUnit';
 import HodNavbar from "./HodNavbar/HodNavbar.js"
 import RegisterLecturer from './RegisterLecturer/RegisterLecturer';
 import ViewUnits from './ViewUnits/ViewUnits';

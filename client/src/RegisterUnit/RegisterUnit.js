@@ -1,40 +1,20 @@
 import React, { useEffect, useState } from "react";
-import myImage2 from "../../Images/undraw_mathematics_-4-otb.svg"
+import myImage2 from "..//Images/undraw_mathematics_-4-otb.svg"
 function RegisterUnit(){
     const [lecturers, setlecturers] = useState([])
     const [fieldSpeciality, setSpecialityField] = useState("")
-    // const [value, setValue] = useState("")
-    // const [text, setText] = useState("")
     useEffect(()=>{
     fetch("/lecturers").then(resp=> resp.json()).then(data=>setlecturers(data))
     },[])
     const filteredLec = lecturers.filter((lecturer)=>
         fieldSpeciality === lecturer.field_of_speciality
     )
-    // const displayLec = filteredLec.map((lec)=>
-    // {
-    //     // return(<option value={lec.id}>{lec.name}</option>)
-    //     return(
-    //         setText(lec.name),
-    //         setValue(lec.id)
-    //     )
-    // })
-    // if(displayLec.length === 0) {
-    //     setText("No available lecturer at the moment")
-    // }else if(displayLec.length === 1){
-    //     setValue(displayLec["0"]["props"]["value"])
-    //     setText(displayLec["0"]["props"]["children"])
-    // }
-    // function handleChangeField(event)
-    // {
-    //     // console.log(event.target.value)
-    //     setSpecialityField(event.target.value)
-    //     // console.log(lecturers)
-    // }
-    // function handleSubmitUnit(){
-
-    // }
-    // console.log(filteredLec)
+    const displayLec = filteredLec.map((lec,index)=>
+    {
+        return(<option value={lec.id} key={index}>{lec.name}</option>)
+    })
+  
+    console.log(filteredLec)
 return(
     <>
       <div className="container-fluid  mx-2 px-5" style={{backgroundColor:"#fbf0d1"}}>
@@ -73,7 +53,7 @@ return(
                         <div className="col mt-2 mb-2 mx-3">
                             <label className="col-form-label">Involved Field</label>
                         <div className="col-auto">
-                        <select  className="form-control">
+                        <select  className="form-control" onChange={(event)=> setSpecialityField(event.target.value)}>
                         <option value="Statistics">Statistics</option>
                         <option value="Accounting">Accounting</option>
                         <option value="Applied Mathematics">Applied Mathematics</option>
@@ -89,16 +69,16 @@ return(
                         </div>
                         </div>
                     </div>
-                    {/* <div className="row g-3 align-items-center">
+                    <div className="row g-3 align-items-center">
                         <div className="col mt-2 mb-2 mx-3">
                             <label className="col-form-label">Assign Lecturer</label>
                         <div className="col-auto">
-                        <select  className="form-control">
-                        <option value={value}>{text}</option>
+                        <select  className="form-control" onChange={(event)=> console.log(event.target.value)}>
+                            {displayLec}
                     </select>
                         </div>
                         </div>
-                    </div> */}
+                    </div>
                     <div className="row g-3 align-items-center">
                         <div className="col mt-2 mb-2 mx-3">
                             <label className="col-form-label">Select Cohort</label>

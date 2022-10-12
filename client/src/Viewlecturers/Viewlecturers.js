@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 function Viewlecturers({lecturersinfo,setlecturersinfo}){
-    // console.log(lecturersinfo)
+    console.log(lecturersinfo)
     const [searchCriteria, setSearchCriteria] = useState("")
+    const [isviewClicked, setisViewClicked] = useState(false)
     function handleChange(event){
         setSearchCriteria(event.target.value)
     }
+    function handleUnitsDisplay(){
+        setisViewClicked(()=> !isviewClicked)
+    }
+    const dispclassnameviewUnits = isviewClicked === true ? " ": "visually-hidden"
+    console.log(dispclassnameviewUnits)
+    
     const filteredLecturesDisplay = lecturersinfo.filter((lecturer)=> lecturer.name.toLowerCase().includes(searchCriteria.toLowerCase()))
     const lecturersDisplay = filteredLecturesDisplay.map((lecturer,index)=>{
         return (
@@ -23,11 +30,17 @@ function Viewlecturers({lecturersinfo,setlecturersinfo}){
                         <h6 className="mb-2 ">Mobile Number: +{lecturer.phone_number}</h6>
                         <h6 className="mb-2">Field of Speciality: {lecturer.field_of_speciality}</h6>
                     </p>
+                            <div>
+                                <h6 className={dispclassnameviewUnits}>
+                                <ul>{(lecturer.units).map(unit => <li>{unit.name}</li>)}</ul>
+                                </h6>
+                                
+                            </div>
                    
                     <div className="container">
                         <div className="row">
                             <div className="col d-flex justify-content-between">
-                            <button className="rounded-pill" style={{backgroundColor:"#41B2E2"}}>View Units</button>
+                            <button className="rounded-pill" style={{backgroundColor:"#41B2E2"}} onClick={()=> handleUnitsDisplay()}>View/hide Units</button>
                             <button className="rounded-pill" style={{backgroundColor:"#41B2E2"}} onClick={()=>handleDeletelec(lecturer.id)}>Delete</button>
                             </div>
                         </div>
@@ -49,6 +62,7 @@ function Viewlecturers({lecturersinfo,setlecturersinfo}){
             })
             setlecturersinfo(updatedlecturers)
     }
+
     
     return(
         <>

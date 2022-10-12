@@ -4,7 +4,7 @@ function ViewUnits(){
     useEffect(()=>{
         fetch("/units").then((response)=> response.json()).then(units=> {
             setUnits(units)
-            // console.log(units)
+            console.log(units)
         })
     },[])
 
@@ -14,9 +14,8 @@ function ViewUnits(){
                 <div className="card-header">{unit.code}</div>
                 <div className="card-body">
                     <h5 className="card-title">{unit.name}</h5>
-                    
                     <ul className="list-group list-group-flush">
-                        <li className="list-group-item my-2 rounded-5">Lecturer Name: {unit.lecturer["name"]}</li>
+                        {/* <li className="list-group-item my-2 rounded-5">Lecturer Name: {unit.lecturer["name"]}</li> */}
                         <li className="list-group-item my-2 rounded-5">Course : {(unit.cohort["course_id"] === 1) ? "Bsc(Mathematics and Computer Science)" : "Bsc(Statistics)"}</li>
                         <li className="list-group-item my-2 rounded-5">Year of Study : {unit.cohort["year_of_study"] === 1? "First year" : " "}
                         {unit.cohort["year_of_study"] === 2? "Second year" : " "}
