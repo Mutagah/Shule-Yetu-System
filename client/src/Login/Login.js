@@ -37,10 +37,10 @@ function Login({setIsHod})
                 </div>
             </div>
     </div>
-    <div className="container-fluid my-5 mx-2 px-5">
+    <div className="container-fluid mx-2 px-5" style={{backgroundColor:"#fbf0d1"}}>
         <div className="row">
-            <div className="col-md-6"><img src={myImage} alt="" className="img-fluid"/></div>
-            <div className="col-md-6">
+            <div className="col-md-6 py-5"><img src={myImage} alt="" className="img-fluid"/></div>
+            <div className="col-md-6 py-5">
             <div className="card my-2 mt-5" style={{backgroundColor:"#4CE0D2"}}>
                     <div className="card-body">
                         <h3 className="card-title text-center mb-4"><u>Sign up / Login form</u></h3>

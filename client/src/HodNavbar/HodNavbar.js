@@ -15,6 +15,7 @@ function HodNavbar(){
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav ms-auto">
                     <NavLink className="nav-link active">Home</NavLink>
+                    <NavLink className="nav-link" to="registerunit">Register Unit</NavLink>
                     <NavLink className="nav-link" to="registerlecturer">Register Lecturer</NavLink>
                     <NavLink className="nav-link" to="viewunits">View Units</NavLink>
                     <NavLink className="nav-link" to="viewlecturers">View Lecturers</NavLink>

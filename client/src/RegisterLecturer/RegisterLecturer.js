@@ -47,72 +47,72 @@ const [errors, setErrors] = useState([])
             <div className="container-fluid" style={{backgroundColor:"#fbf0d1"}}>
                 <div className="row">
                     <div className="col-5 mx-auto">
-                    <div class="card my-4 align-items-center mx-2 rounded-5" style={{backgroundColor:"#22AAA1"}}>
-                    <div class="row g-3 align-items-center ">
-                        <div class="col mt-5 mb-2 mx-3">
-                            <label class="col-form-label">Name</label>
-                        <div class="col-auto">
-                            <input type="text" class="form-control" value={LecRegister.name} onChange={((event)=> setName(event.target.value))}/>
+                    <div className="card my-4 align-items-center mx-2 rounded-5" style={{backgroundColor:"#22AAA1"}}>
+                    <div className="row g-3 align-items-center ">
+                        <div className="col mt-5 mb-2 mx-3">
+                            <label className="col-form-label">Name</label>
+                        <div className="col-auto">
+                            <input type="text" className="form-control" value={LecRegister.name} onChange={((event)=> setName(event.target.value))}/>
                         </div>
-                        <div class="col-auto">
-                            <span class="form-text">
+                        <div className="col-auto">
+                            <span className="form-text">
                             Include title
                             </span>
                         </div>
                         </div>
                     </div>
-                    <div class="row g-3 align-items-center">
-                        <div class="col my-1 mx-3">
-                            <label class="col-form-label">Age</label>
-                        <div class="col-auto">
-                            <input type="number" class="form-control" onChange={((event)=> setAge(event.target.value))} value={LecRegister.age}/>
+                    <div className="row g-3 align-items-center">
+                        <div className="col my-1 mx-3">
+                            <label className="col-form-label">Age</label>
+                        <div className="col-auto">
+                            <input type="number" className="form-control" onChange={((event)=> setAge(event.target.value))} value={LecRegister.age}/>
                         </div>
-                        <div class="col-auto">
-                            <span class="form-text">
+                        <div className="col-auto">
+                            <span className="form-text">
                             Must be greater than 30
                             Less than 58
                             </span>
                             </div>
                         </div>
                     </div>
-                    <div class="row g-3 align-items-center">
-                        <div class="col mt-2 mb-2 mx-3">
-                            <label class="col-form-label">Phone Number</label>
-                        <div class="col-auto">
-                            <input type="tel" class="form-control" placeholder="254-000-0000" onChange={((event)=> setPhoneNumber(event.target.value))} value={LecRegister.phone_number}/>
+                    <div className="row g-3 align-items-center">
+                        <div className="col mt-2 mb-2 mx-3">
+                            <label className="col-form-label">Phone Number</label>
+                        <div className="col-auto">
+                            <input type="tel" className="form-control" placeholder="254-000-0000" onChange={((event)=> setPhoneNumber(event.target.value))} value={LecRegister.phone_number}/>
                         </div>
                         </div>
                     </div>
-                    <div class="row g-3 align-items-center">
-                        <div class="col mt-2 mb-2 mx-3">
-                            <label class="col-form-label">Email address</label>
-                        <div class="col-auto">
-                            <input type="text" class="form-control" onChange={((event)=> setEmailAddress(event.target.value))} value={LecRegister.email_address}/>
+                    <div className="row g-3 align-items-center">
+                        <div className="col mt-2 mb-2 mx-3">
+                            <label className="col-form-label">Email address</label>
+                        <div className="col-auto">
+                            <input type="text" className="form-control" onChange={((event)=> setEmailAddress(event.target.value))} value={LecRegister.email_address}/>
                         </div>
-                        <div class="col-auto">
-                            <span class="form-text">
+                        <div className="col-auto">
+                            <span className="form-text">
                             </span>
                         </div>
                         </div>
                     </div>
-                    <div class="row g-3 align-items-center">
-                        <div class="col mt-2 mb-2 mx-3">
-                            <label class="col-form-label">Image Url</label>
-                        <div class="col-auto">
-                            <input type="text" class="form-control" onChange={((event)=> setImageUrl(event.target.value))} value={LecRegister.image_url}/>
+                    <div className="row g-3 align-items-center">
+                        <div className="col mt-2 mb-2 mx-3">
+                            <label className="col-form-label">Image Url</label>
+                        <div className="col-auto">
+                            <input type="text" className="form-control" onChange={((event)=> setImageUrl(event.target.value))} value={LecRegister.image_url}/>
                         </div>
-                        <div class="col-auto">
-                            <span class="form-text">
+                        <div className="col-auto">
+                            <span className="form-text">
                             Your Own face image
                             </span>
                         </div>
                         </div>
                     </div>
-                    <div class="row g-3 align-items-center">
-                        <div class="col mt-2 mb-2 mx-3">
-                            <label class="col-form-label">Field of Speciality</label>
-                        <div class="col-auto">
-                        <select onChange={event=> setFieldOfSpeciality(event.target.value)} class="form-control">
+                    <div className="row g-3 align-items-center">
+                        <div className="col mt-2 mb-2 mx-3">
+                            <label className="col-form-label">Field of Speciality</label>
+                        <div className="col-auto">
+                        <select onChange={event=> setFieldOfSpeciality(event.target.value)} className="form-control">
                         <option value="Statistics">Statistics</option>
                         <option value="Accounting">Accounting</option>
                         <option value="Applied Mathematics">Applied Mathematics</option>
@@ -128,14 +128,14 @@ const [errors, setErrors] = useState([])
                         </div>
                         </div>
                     </div>
-                     <div class="row g-3 align-items-center">
-                        <div class="col mt-2 mb-3 mx-3">
-                            <label class="col-form-label">Password </label>
-                        <div class="col-auto">
-                            <input type="password" class="form-control" onChange={((event)=> setPassword(event.target.value))} value={LecRegister.password}/>
+                     <div className="row g-3 align-items-center">
+                        <div className="col mt-2 mb-3 mx-3">
+                            <label className="col-form-label">Password </label>
+                        <div className="col-auto">
+                            <input type="password" className="form-control" onChange={((event)=> setPassword(event.target.value))} value={LecRegister.password}/>
                         </div>
-                        <div class="col-auto">
-                            <span class="form-text">
+                        <div className="col-auto">
+                            <span className="form-text">
                             </span>
                         </div>
                         </div>
@@ -143,33 +143,33 @@ const [errors, setErrors] = useState([])
                     </div>
                     </div>
                     <div className="col-7 mt-4">
-                    <div class="card mb-3 px-2 rounded-5" style={{backgroundColor:"#4CE0D2"}}>
-                <div class="row g-0">
-                <div class="col-md-8">
-                    <div class="card-body ">
-                        <h5 class="card-title text-center">Your Card</h5>
-                        <ul class="list-group list-group-flush">
+                    <div className="card mb-3 px-2 rounded-5" style={{backgroundColor:"#4CE0D2"}}>
+                <div className="row g-0">
+                <div className="col-md-8">
+                    <div className="card-body ">
+                        <h5 className="card-title text-center">Your Card</h5>
+                        <ul className="list-group list-group-flush">
 
-                            <li class="list-group-item mb-3">Name: {name}</li>
+                            <li className="list-group-item mb-3">Name: {name}</li>
 
-                            <li class="list-group-item mb-3">Phone number: {phoneNumber}</li>
+                            <li className="list-group-item mb-3">Phone number: {phoneNumber}</li>
 
-                            <li class="list-group-item mb-3">Email address: {emailAddress} </li>
+                            <li className="list-group-item mb-3">Email address: {emailAddress} </li>
 
-                            <li class="list-group-item mb-3">Age:  {age}
+                            <li className="list-group-item mb-3">Age:  {age}
                             </li>
 
-                            <li class="list-group-item mb-3">Field of Speciality:  {field_of_speciality}
+                            <li className="list-group-item mb-3">Field of Speciality:  {field_of_speciality}
                             </li>
 
-                            <li class="list-group-item mb-2" style={{backgroundColor:"#041B15"}}>  
+                            <li className="list-group-item mb-2" style={{backgroundColor:"#041B15"}}>  
                             </li>
                         </ul>
-                        <p class="card-text text-center">Welcome to our school department</p>
+                        <p className="card-text text-center">Welcome to our school department</p>
                     </div>
                     </div>
-                    <div class="col-md-4 mt-5">
-                    <img src={imageUrl} class=" rounded-3 img-fluid rounded-start" alt="..."/>
+                    <div className="col-md-4 mt-5">
+                    <img src={imageUrl} className=" rounded-3 img-fluid rounded-start" alt="..."/>
                     </div> 
                 </div>
                 </div>
