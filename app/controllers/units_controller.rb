@@ -24,7 +24,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
     private
 
     def invalid_record
-        render json:{error: "Please ensure all inputs are filled"}
+        render json:{error: "Please ensure all inputs are filled"},status: :unprocessable_entity
     end
 
     def unfound_record

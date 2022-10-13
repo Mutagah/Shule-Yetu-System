@@ -31,7 +31,7 @@ function RegisterUnit({onAddingNewUnit}){
                     setFormData({code:"",name:"",lecturer_id:0})
                     )
                 }else{
-                    response.json().then(errorObj => setErrors(errorObj.errors))
+                    response.json().then(errorObj => setErrors(errorObj.error))
                 }
             })
     }
@@ -51,9 +51,6 @@ return(
                             <input type="text" className="form-control" onChange={handleInputChange} value={formData.name} name="name"/>
                         </div>
                         <div className="col-auto">
-                            <span className="form-text">
-                            Include title
-                            </span>
                         </div>
                         </div>
                     </div>
@@ -124,6 +121,11 @@ return(
                             <button className="p-2 d-grid my-3 rounded-5" onClick={handleSubmit} >Submit Button</button>
 
                     </div>
+                    </div>
+                    <div className="container mt-4 ms-auto">
+                        <div className="row">
+                            <div className="col"> <h3 className="text-center" style={{color:"red"}}>{errors}</h3></div>
+                        </div>
                     </div>
         </div>
     </div>
