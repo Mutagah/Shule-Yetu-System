@@ -1,12 +1,12 @@
-import React, { useState,useEffect } from "react";
-function ViewUnits(){
-    const [units, setUnits] = useState([])
-    useEffect(()=>{
-        fetch("/units").then((response)=> response.json()).then(units=> {
-            setUnits(units)
-            console.log(units)
-        })
-    },[])
+import React from "react";
+function ViewUnits({units}){
+    // const [units, setUnits] = useState([])
+    // useEffect(()=>{
+    //     fetch("/units").then((response)=> response.json()).then(units=> {
+    //         setUnits(units)
+    //         console.log(units)
+    //     })
+    // },[])
 
         const unitsDisplay = (Array.isArray(units) ? units : []).map((unit)=>{
             return(

@@ -1,5 +1,5 @@
 class DepartmentHeadsController < ApplicationController
-    skip_before_action :authorized,only: [:create, :logoutSession]
+    # skip_before_action :authorized,only: [:create, :logoutSession]
     def index
         render json: DepartmentHead.all, status: :ok
     end

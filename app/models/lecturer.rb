@@ -1,6 +1,7 @@
 class Lecturer < ApplicationRecord
     has_many :units
     has_many :cohorts, through: :units
+    # skip_before_action :authorized,only: :create
 
     has_secure_password
 
