@@ -8,7 +8,7 @@ function ViewUnits(){
         })
     },[])
 
-        const unitsDisplay = units.map((unit)=>{
+        const unitsDisplay = (Array.isArray(units) ? units : []).map((unit)=>{
             return(
                 <div className="card text-dark mt-3 mb-3" style={{width:"18rem",backgroundColor:"#4caba1"}}>
                 <div className="card-header">{unit.code}</div>

@@ -6,7 +6,7 @@ function RegisterUnit(){
     useEffect(()=>{
     fetch("/lecturers").then(resp=> resp.json()).then(data=>setlecturers(data))
     },[])
-    const filteredLec = lecturers.filter((lecturer)=>
+    const filteredLec = (Array.isArray(lecturers)? lecturers: []).filter((lecturer)=>
         fieldSpeciality === lecturer.field_of_speciality
     )
     const displayLec = filteredLec.map((lec,index)=>

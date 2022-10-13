@@ -9,8 +9,8 @@ function Viewlecturers({lecturersinfo,setlecturersinfo}){
         setisViewClicked(()=> !isviewClicked)
     }
     const dispclassnameviewUnits = isviewClicked === true ? " ": "visually-hidden"    
-    const filteredLecturesDisplay = lecturersinfo.filter((lecturer)=> lecturer.name.toLowerCase().includes(searchCriteria.toLowerCase()))
-    const lecturersDisplay = filteredLecturesDisplay.map((lecturer,index)=>{
+    const filteredLecturesDisplay = (Array.isArray(lecturersinfo) ? lecturersinfo : []).filter((lecturer)=> lecturer.name.toLowerCase().includes(searchCriteria.toLowerCase()))
+    const lecturersDisplay = (Array.isArray(filteredLecturesDisplay)? filteredLecturesDisplay : []).map((lecturer,index)=>{
         return (
             <div key={index} className="card mb-3" style={{width: "540px",border:"#136F63 5px solid"}}>
             <div className="row g-0">

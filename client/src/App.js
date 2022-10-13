@@ -38,7 +38,6 @@ function onAddingnewLecture(newLecturer){
           <Route exact path="/viewlecturers" element={<Viewlecturers lecturersinfo={lecturersinfo} setlecturersinfo={setlecturersinfo}/>} />
 
           <Route exact path="/" element={<ViewUnits/>} />
-          {/* <Route exact path="/" element={<LecAfterLogin isLec={isLec}/>}/> */}
 
         </Routes>
     </>
