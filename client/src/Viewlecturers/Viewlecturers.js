@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 function Viewlecturers({lecturersinfo,setlecturersinfo}){
-    console.log(lecturersinfo)
     const [searchCriteria, setSearchCriteria] = useState("")
     const [isviewClicked, setisViewClicked] = useState(false)
     function handleChange(event){
@@ -9,15 +8,11 @@ function Viewlecturers({lecturersinfo,setlecturersinfo}){
     function handleUnitsDisplay(){
         setisViewClicked(()=> !isviewClicked)
     }
-    const dispclassnameviewUnits = isviewClicked === true ? " ": "visually-hidden"
-    console.log(dispclassnameviewUnits)
-    
+    const dispclassnameviewUnits = isviewClicked === true ? " ": "visually-hidden"    
     const filteredLecturesDisplay = lecturersinfo.filter((lecturer)=> lecturer.name.toLowerCase().includes(searchCriteria.toLowerCase()))
     const lecturersDisplay = filteredLecturesDisplay.map((lecturer,index)=>{
         return (
             <div key={index} className="card mb-3" style={{width: "540px",border:"#136F63 5px solid"}}>
-                {/* #84CAE7 */}
-                {/* #41B2E2 */}
             <div className="row g-0">
                 <div className="col-md-4">
                 <img src={lecturer.image_url} className="img-fluid rounded-start" alt="..."/>

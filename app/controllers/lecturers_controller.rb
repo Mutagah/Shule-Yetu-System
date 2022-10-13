@@ -26,6 +26,16 @@ rescue_from ActiveRecord::RecordNotFound, with: :unfound_record
         lecturer.destroy
         head :no_content
     end
+    
+    def loginlec
+    lec = Lecturer.find_by(name: params[:name])
+        if lec&.authenticate(params[:password])
+            session[:lec_id] = lec.id 
+        render json: lec, status: :created
+        else
+            render json: {error: {Login: "Invalid username or password"}}, status: :unauthorized
+        end
+    end
 
     private
 
@@ -40,4 +50,6 @@ rescue_from ActiveRecord::RecordNotFound, with: :unfound_record
     def unfound_record
         render json:{error: "Lecturer not found"}, status: :not_found
     end
+
+    
 end

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import myImage from "../Images/undraw_teaching_re_g7e3 (1).svg"
-function Login({setIsHod})
+function Login({setIsHod, setIsLec})
 {
     const [userDetails, setUserDetails] = useState({})
     const [error, setErrors] = useState([])
@@ -18,11 +18,35 @@ function Login({setIsHod})
     }).then(res=>{
         if(res.ok)
         {
-            res.json().then(user => setIsHod(user)).finally(setUserDetails({name: "", password: ""}))
+            res.json().then(user => {
+                setIsHod(user)
+            }).finally(setUserDetails({name: "", password: ""}))
         }else{
             res.json().then(e => setErrors(Object.entries(e.error).flat().join(" : "))).finally(setUserDetails({name: "", password: ""}))
         }
     })
+}
+function handleLecLogin(event){
+    event.preventDefault()
+        fetch("/lecturerslogin",{
+            method: "POST",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body : JSON.stringify(userDetails)
+    }).then(res=>{
+        if(res.ok)
+        {
+            res.json().then(user => { 
+                setIsLec(user)
+                console.log(user)
+            })
+            .finally(setUserDetails({name: "", password: ""}))
+        }else{
+            res.json().then(e => setErrors(Object.entries(e.error).flat().join(" : "))).finally(setUserDetails({name: "", password: ""}))
+        }
+    })
+
 }
     return (
     <>
@@ -55,12 +79,9 @@ function Login({setIsHod})
                                 <input type="password" className="form-control" name="password" value={userDetails.password} placeholder="Enter password" onChange={handleChange}/>
                             </div>
                             <div className="my-5">
-                                <div className="row gx-2">
+                                <div className="row gx-2 justify-content-between">
                                     <div className="col-4">
-                                        <button type="submit" className="btn btn-primary mb-2 me-2">Sign up(lecturer)</button>
-                                    </div>
-                                    <div className="col-4">
-                                        <button type="submit" className="btn btn-primary mb-2 me-2">Login in(lecturer)</button>
+                                        <button type="submit" className="btn btn-primary mb-2 me-2" onClick={handleLecLogin}>Login in(lecturer)</button>
                                     </div>     
                                     <div className="col-4">
                                         <button type="submit" className="btn btn-primary" onClick={handleHodClick}>Login as Head of Department</button>
