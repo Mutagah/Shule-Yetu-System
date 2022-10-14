@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import myImage2 from "..//Images/undraw_mathematics_-4-otb.svg"
-function RegisterUnit({onAddingNewUnit}){
+function RegisterUnit({onAddingNewUnit,unitEdit}){
     const [lecturers, setlecturers] = useState([])
     const [fieldSpeciality, setSpecialityField] = useState("")
     const [errors, setErrors] = useState([])
     const [formData, setFormData] = useState({})
     const [cohortId, setCohortid] = useState(0)
+    console.log(unitEdit)
     useEffect(()=>{
     fetch("/lecturers").then(resp=> resp.json()).then(data=>setlecturers(data))
     },[])

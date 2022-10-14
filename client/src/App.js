@@ -16,6 +16,7 @@ function App() {
   const [isLec, setIsLec] = useState([])
   const [lecturersinfo, setlecturersinfo] = useState([])
   const [units, setUnits] = useState([])
+  const [unitEdit,setUnitEdit] = useState({})
   useEffect(()=>{
     fetch("/me").then(res=> res.json()).then((data)=>setIsHod(data))
     fetch("/lecturers").then(res => res.json()).then(data =>setlecturersinfo(data))
@@ -28,7 +29,11 @@ function onAddingnewLecture(newLecturer){
 function onAddingNewUnit(newUnit){
   setUnits([...units,newUnit])
 }
-  return isHod ?
+function handleEdit(unit){
+  setUnitEdit({...unitEdit,unit})
+}
+  console.log(unitEdit)  
+return isHod ?
     <>
         <HodNavbar setIsHod={setIsHod}/>
 
@@ -36,11 +41,11 @@ function onAddingNewUnit(newUnit){
 
           <Route exact path="/registerlecturer" element={<RegisterLecturer onAddingnewLecture={onAddingnewLecture}/>}/>
 
-          <Route exact path="/registerunit" element={<RegisterUnit onAddingNewUnit={onAddingNewUnit}/>} />
+          <Route exact path="/registerunit" element={<RegisterUnit onAddingNewUnit={onAddingNewUnit} unitEdit={unitEdit}/>} />
 
-          <Route exact path="/viewlecturers" element={<Viewlecturers lecturersinfo={lecturersinfo} setlecturersinfo={setlecturersinfo}/>} />
+          <Route exact path="/viewlecturers" element={<Viewlecturers lecturersinfo={lecturersinfo} setlecturersinfo={setlecturersinfo} />} />
 
-          <Route exact path="/" element={<ViewUnits units={units}/>} />
+          <Route exact path="/" element={<ViewUnits units={units} handleEdit={handleEdit}/>} />
           
           <Route exact path="/login" element={<Login setIsHod={setIsHod} setIsLec={setIsLec}/>}/>
 

@@ -32,7 +32,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
     end
 
     def update_unit_params
-        params.permit(:lecturer_id)
+        params.permit(:name,:code,:lecturer_id)
     end
 
     def unit_params

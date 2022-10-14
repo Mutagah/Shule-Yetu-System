@@ -1,5 +1,7 @@
-import React from "react";
-function ViewUnits({units}){
+import React, { useState } from "react";
+import {Link} from "react-router-dom"
+function ViewUnits({units,handleEdit}){
+    
     // const [units, setUnits] = useState([])
     // useEffect(()=>{
     //     fetch("/units").then((response)=> response.json()).then(units=> {
@@ -7,6 +9,8 @@ function ViewUnits({units}){
     //         console.log(units)
     //     })
     // },[])
+    // const [unit, setUnit] = useState([])
+    
 
         const unitsDisplay = (Array.isArray(units) ? units : []).map((unit)=>{
             return(
@@ -27,7 +31,7 @@ function ViewUnits({units}){
                     <div className="container">
                         <div className="row">
                             <div className="col ">
-                                <button className="rounded-4 ml-auto">Update unit
+                                <button className="rounded-4 ml-auto" onClick={()=> handleEdit(unit)}><Link to="/registerunit">Edit unit</Link>
                                 </button>
                             </div>
                         </div>
@@ -37,6 +41,7 @@ function ViewUnits({units}){
                 </div>
             )
         })
+        
 
 return(
     <>

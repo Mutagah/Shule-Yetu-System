@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 function RegisterLecturer({onAddingnewLecture}){
 const [age, setAge] = useState(0)
 const [name, setName] = useState("")
@@ -187,8 +188,7 @@ const [errors, setErrors] = useState([])
                 <div className="container mt-5">
                     <div className="row">
                         <div className="col d-flex justify-content-center">
-                            <button className="rounded-pill p-3" style={{backgroundColor:"#22AAA1"}} onClick={handleLecSubmission}>
-                            Register Lecturer
+                            <button className="rounded-pill p-3" style={{backgroundColor:"#22AAA1"}} onClick={handleLecSubmission}><Link to="/viewlecturers">Register Lecturer</Link>
                             </button>
                         </div>
                     </div>

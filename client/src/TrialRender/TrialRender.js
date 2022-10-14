@@ -2,10 +2,6 @@ import React, { useEffect } from "react";
 import {NavLink} from "react-router-dom"
 function TrialRender({isLec}){
     console.log(isLec)
-    // useEffect(()=>
-    // {
-    //     fetch(`lecturers/:id`).then()
-    // })
     return(
         <>
         <div className="container-fluid mt-1 py-3 rounded-3" style={{backgroundColor:"#4CE0D2"}}>
