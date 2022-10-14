@@ -10,9 +10,10 @@ import HodNavbar from "./HodNavbar/HodNavbar.js"
 import RegisterLecturer from './RegisterLecturer/RegisterLecturer';
 import ViewUnits from './ViewUnits/ViewUnits';
 import TrialRender from './TrialRender/trialrender';
+import Footer from './Footer/Footer';
 function App() {
-  const [isHod, setIsHod] = useState("")
-  const [isLec, setIsLec] = useState(0)
+  // i'm assuming that this is boolean are they both json variables >> They come as an array ama object either from the log in component
+  const [isHod, setIsHod] = useState(null)//Json is set in this state after clicking the Hod Log in button
   const [lecturersinfo, setlecturersinfo] = useState([])
   const [units, setUnits] = useState([])
   useEffect(()=>{
@@ -27,11 +28,7 @@ function onAddingnewLecture(newLecturer){
 function onAddingNewUnit(newUnit){
   setUnits([...units,newUnit])
 }
-
-  if(!isHod)return  <Login setIsHod={setIsHod} setIsLec={setIsLec}/>
-  return (
-    <>
-    { isHod ?
+  return isHod ?
     <>
         <HodNavbar setIsHod={setIsHod}/>
 
@@ -44,17 +41,19 @@ function onAddingNewUnit(newUnit){
           <Route exact path="/viewlecturers" element={<Viewlecturers lecturersinfo={lecturersinfo} setlecturersinfo={setlecturersinfo}/>} />
 
           <Route exact path="/" element={<ViewUnits units={units}/>} />
+          
+          <Route exact path="/login" element={<Login setIsHod={setIsHod}/>}/>
+
+          <Route  element/>
 
         </Routes>
-    </>
-    : isLec ? <TrialRender/> :
 
-    <Routes>
-      <Route exact path="/login" element={ <Login setIsHod={setIsHod} setIsLec={setIsLec}/>}/>
-    </Routes>
-    }
+        <Footer/>
     </>
-  );
+    :
+    <>
+     <Login setIsHod={setIsHod}/>
+    </>;
 }
 
 export default App;

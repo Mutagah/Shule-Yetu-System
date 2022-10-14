@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import myImage from "../Images/undraw_teaching_re_g7e3 (1).svg"
-function Login({setIsHod, setIsLec})
+function Login({setIsHod})
 {
     const [userDetails, setUserDetails] = useState({})
     const [error, setErrors] = useState([])
@@ -37,9 +37,9 @@ function handleLecLogin(event){
     }).then(res=>{
         if(res.ok)
         {
-            res.json().then(user => { 
-                setIsLec(user)
-                console.log(user)
+            res.json().then(() => { 
+                setIsHod(null)
+                // console.log(user)
             })
             .finally(setUserDetails({name: "", password: ""}))
         }else{
