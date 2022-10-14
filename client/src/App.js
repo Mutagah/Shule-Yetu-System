@@ -9,11 +9,11 @@ import RegisterUnit from './RegisterUnit/RegisterUnit';
 import HodNavbar from "./HodNavbar/HodNavbar.js"
 import RegisterLecturer from './RegisterLecturer/RegisterLecturer';
 import ViewUnits from './ViewUnits/ViewUnits';
-import TrialRender from './TrialRender/trialrender';
+import TrialRender from './TrialRender/TrialRender';
 import Footer from './Footer/Footer';
 function App() {
-  // i'm assuming that this is boolean are they both json variables >> They come as an array ama object either from the log in component
-  const [isHod, setIsHod] = useState(null)//Json is set in this state after clicking the Hod Log in button
+  const [isHod, setIsHod] = useState(null)
+  const [isLec, setIsLec] = useState([])
   const [lecturersinfo, setlecturersinfo] = useState([])
   const [units, setUnits] = useState([])
   useEffect(()=>{
@@ -42,9 +42,9 @@ function onAddingNewUnit(newUnit){
 
           <Route exact path="/" element={<ViewUnits units={units}/>} />
           
-          <Route exact path="/login" element={<Login setIsHod={setIsHod}/>}/>
+          <Route exact path="/login" element={<Login setIsHod={setIsHod} setIsLec={setIsLec}/>}/>
 
-          <Route  element/>
+          <Route  exact path="/trialrender" element={<TrialRender isLec={isLec}/>}/>
 
         </Routes>
 

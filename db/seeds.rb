@@ -37,7 +37,7 @@ cohort8 = Cohort.create(year_of_study:4,semester:1,course_id:course2.id)
 
 puts "Seeding Lecturers table"
 
-lecturer1 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Statistics",image_url:"https://image.shutterstock.com/image-photo/asian-senior-male-calculus-professor-260nw-1891943233.jpg", password:"lec1")
+lecturer1 = Lecturer.create(name: "Christine Anyango", age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Statistics",image_url:"https://image.shutterstock.com/image-photo/asian-senior-male-calculus-professor-260nw-1891943233.jpg", password:"lec1")
 
 lecturer2 = Lecturer.create(name: Faker::Name.name, age: rand(30..56), phone_number: "#{rand(254700000000..254799999999)}", email_address: Faker::Internet.email, field_of_speciality: "Accounting",image_url:"https://pediaa.com/wp-content/uploads/2016/04/Difference-Between-Lecturer-and-Professor-image-2.jpg",password:"lec2")
 

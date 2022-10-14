@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {NavLink} from "react-router-dom"
-function TrialRender(){
+function TrialRender({isLec}){
+    console.log(isLec)
+    // useEffect(()=>
+    // {
+    //     fetch(`lecturers/:id`).then()
+    // })
     return(
         <>
         <div className="container-fluid mt-1 py-3 rounded-3" style={{backgroundColor:"#4CE0D2"}}>
@@ -25,7 +30,7 @@ function TrialRender(){
         <div className="container">
             <div className="row">
                 <div className="col">
-                    
+                    Hello guys
                 </div>
             </div>
         </div>

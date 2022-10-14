@@ -25,8 +25,9 @@ function HodNavbar({setIsHod}){
                     <NavLink className="nav-link" to="/">View Units</NavLink>
                     <NavLink className="nav-link" to="/registerunit">Register Unit</NavLink>
                     <NavLink className="nav-link" to="/registerlecturer">Register Lecturer</NavLink>
-                    <NavLink className="nav-link" to="viewlecturers">View Lecturers</NavLink>
-                    <button className="bg-primary rounded-5" onClick={handleClick}>Log out</button>
+                    <NavLink className="nav-link" to="/viewlecturers">View Lecturers</NavLink>
+                    <NavLink className="nav-link" to="/trialrender">Trial Render</NavLink>
+                    <button className="rounded-5" style={{backgroundColor:"#4caba1"}} onClick={handleClick}>Log out</button>
                 </div>
                 </div>
             </div>

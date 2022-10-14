@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import myImage from "../Images/undraw_teaching_re_g7e3 (1).svg"
-function Login({setIsHod})
+function Login({setIsHod,setIsLec})
 {
     const [userDetails, setUserDetails] = useState({})
     const [error, setErrors] = useState([])
@@ -20,6 +20,8 @@ function Login({setIsHod})
         {
             res.json().then(user => {
                 setIsHod(user)
+                //To be Deleted afterwards when lec has logged in Successfully
+                setIsLec(user)
             }).finally(setUserDetails({name: "", password: ""}))
         }else{
             res.json().then(e => setErrors(Object.entries(e.error).flat().join(" : "))).finally(setUserDetails({name: "", password: ""}))
@@ -37,9 +39,8 @@ function handleLecLogin(event){
     }).then(res=>{
         if(res.ok)
         {
-            res.json().then(() => { 
+            res.json().then((user) => { 
                 setIsHod(null)
-                // console.log(user)
             })
             .finally(setUserDetails({name: "", password: ""}))
         }else{
